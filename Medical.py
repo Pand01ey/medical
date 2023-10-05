@@ -11,7 +11,7 @@ loaded_model = pickle.load(model)
 
 
 #creating a function for Prediction
-def medical_insurance_cost_prediction(input_data):
+def medical_insurance_cost_prediction(input_data,loaded_model):
     # changing the input_data to numpy array
     input_data_as_numpy_array = np.array(input_data)
 
@@ -39,6 +39,6 @@ diagnosis = ''
 
 # getting the input data from the user
 if st.button('Predicted Medical Insurance Cost: '):
-    diagnosis = medical_insurance_cost_prediction([int(age),int(sex),float(bmi),int(children),int(smoker),int(region)])
+    diagnosis = medical_insurance_cost_prediction([int(age),int(sex),float(bmi),int(children),int(smoker),int(region)],loaded_model=loaded_model)
     
 st.success(diagnosis)
