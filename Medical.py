@@ -6,7 +6,7 @@ import pickle
 
 # loading the saved model
 loaded_model = pickle.load(open("Medical1.pkl","rb"))
-
+print(loaded_model)
 
 
 #creating a function for Prediction
