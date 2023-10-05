@@ -5,7 +5,7 @@ import sklearn
 import pickle
 
 # loading the saved model
-loaded_model = pickle.load('Medical.pkl','r')
+loaded_model = pickle.load('Medical.pkl')
 
 
 
