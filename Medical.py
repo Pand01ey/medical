@@ -5,7 +5,7 @@ import sklearn
 import pickle
 
 # loading the saved model
-loaded_model = pickle.load(open("Medical1.pkl","rb"))
+loaded_model = pickle.load(open("Medical2.pkl","rb"))
 print(loaded_model)
 
 
@@ -17,7 +17,7 @@ def medical_insurance_cost_prediction(input_data,loaded_model):
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
-    prediction = loaded_model.predict(input_data)
+    prediction = loaded_model.predict(input_data_reshaped)
 
     return prediction
 
